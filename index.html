@@ -1,46 +1,180 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nexum - Agencia Digital</title>
+  <title>Nexum Agencia de Seguros | Protección & Crecimiento</title>
+  <meta name="description" content="Seguros de vida indexados al Nasdaq y S&P 500, y seguros de salud para Latinoamérica, EE.UU. y España." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="container">
-      <h1>Nexum</h1>
-      <p>Soluciones digitales creativas</p>
+      <nav>
+        <div class="logo">Nexum <span>Protección & Crecimiento</span></div>
+        <div class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#productos">Productos</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="about">
-      <h2>Sobre Nosotros</h2>
-      <p>
-        Nexum es una agencia digital enfocada en crear experiencias web modernas,
-        funcionales y atractivas. Diseñamos, desarrollamos y potenciamos marcas
-        con tecnología y creatividad.
-      </p>
-    </section>
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <h1>Protege tu vida y haz crecer tu patrimonio</h1>
+      <p>Ofrecemos seguros de vida indexados al Nasdaq y S&P 500, y seguros de salud de alta calidad para ti y tu familia.</p>
+      <a href="#contacto" class="btn">Agenda tu asesoría gratuita</a>
+    </div>
+  </section>
 
-    <section class="services">
-      <h2>Servicios</h2>
+  <!-- Beneficios -->
+  <section class="benefits" id="beneficios">
+    <div class="container">
+      <h2 class="section-title">Por qué nuestros clientes nos eligen</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3>Crecimiento con protección</h3>
+          <p>Tu seguro de vida crece con los mercados, pero sin riesgo de perder tu capital.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Protección total</h3>
+          <p>Garantizamos el futuro de tu familia, sin importar lo que pase.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🏥</div>
+          <h3>Cobertura médica global</h3>
+          <p>Acceso a los mejores hospitales y especialistas en EE.UU., Europa y Latinoamérica.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💬</div>
+          <h3>Asesoría personalizada</h3>
+          <p>Nuestro equipo te guía paso a paso para tomar la mejor decisión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section class="products" id="productos">
+    <div class="container">
+      <h2 class="section-title">Nuestros productos</h2>
+      <div class="products-grid">
+        <!-- Producto 1 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Seguro de vida indexado">
+          <div class="product-content">
+            <h3>Seguro de Vida Indexado</h3>
+            <p>Haz crecer tu inversión ligada al rendimiento del Nasdaq y S&P 500, con protección del capital y beneficios fiscales.</p>
+            <a href="#contacto" class="btn">Cotizar ahora</a>
+          </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Seguro de salud">
+          <div class="product-content">
+            <h3>Seguro de Salud Integral</h3>
+            <p>Cobertura médica amplia para ti y tu familia, con acceso a redes de hospitales de élite en múltiples países.</p>
+            <a href="#contacto" class="btn">Cotizar ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Por qué elegirnos? -->
+  <section class="why-us">
+    <div class="container">
+      <h2 class="section-title">¿Por qué elegirnos?</h2>
       <ul>
-        <li>Diseño web responsive</li>
-        <li>Desarrollo frontend</li>
-        <li>Identidad digital</li>
-        <li>Marketing digital</li>
+        <li>Somos agentes certificados con experiencia en seguros financieros innovadores.</li>
+        <li>Trabajamos con BMI, una compañía con sólida reputación internacional.</li>
+        <li>Enfocados en tu bienestar financiero y familiar, no solo en vender.</li>
+        <li>Te acompañamos en cada paso: desde la decisión hasta el servicio posventa.</li>
+        <li>Ofrecemos soluciones personalizadas, no productos estándar.</li>
       </ul>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- CTA Final -->
+  <section class="cta">
+    <div class="container">
+      <h2>Listo para proteger tu futuro</h2>
+      <p>Agenda una asesoría gratuita y sin compromiso con uno de nuestros expertos.</p>
+      <a href="#contacto" class="btn">Habla con un asesor</a>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <h2 class="section-title">Contáctanos</h2>
+      <div class="form-container">
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono (con código de país)</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="product">Producto de interés</label>
+            <select id="product" name="product">
+              <option value="vida">Seguro de Vida Indexado</option>
+              <option value="salud">Seguro de Salud</option>
+              <option value="ambos">Ambos</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje (opcional)</label>
+            <textarea id="message" name="message" placeholder="Cuéntanos tus objetivos o dudas..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Nexum. Todos los derechos reservados.</p>
+      <p>&copy; 2025 Nexum Agencia. Todos los derechos reservados.</p>
+      <p>Operamos en EE.UU., Latinoamérica y España.</p>
     </div>
   </footer>
+
+  <!-- Script -->
+  <script>
+    // Cambio de idioma (próximamente lo expandiremos a inglés)
+    function toggleLanguage() {
+      alert("Versión en inglés disponible en breve. Próximamente activaremos el cambio de idioma.");
+    }
+
+    // Simulación de envío de formulario
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Gracias por tu mensaje. Un asesor se pondrá en contacto contigo pronto.');
+      this.reset();
+    });
+  </script>
+
 </body>
 </html>
