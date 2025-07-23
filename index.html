@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Protección & Crecimiento</title>
+  <meta name="description" content="Seguros de vida indexados al Nasdaq y S&P 500, y seguros de salud para proteger tu futuro." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* Reset y base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    /* Header */
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .logo span {
+      color: #FFD700;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #FFD700;
+    }
+    .lang-switch {
+      background: #FFD700;
+      color: #003366;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+    .btn {
+      display: inline-block;
+      background: #FFD700;
+      color: #003366;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    }
+
+    /* Sección Beneficios */
+    .benefits {
+      padding: 80px 0;
+      background: white;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 50px;
+      color: #003366;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .benefit-card {
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+      background: #f0f7ff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .benefit-icon {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 15px;
+    }
+    .benefit-card h3 {
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    /* Productos */
+    .products {
+      padding: 80px 0;
+      background: #f0f7ff;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .product-content {
+      padding: 20px;
+    }
+    .product-content h3 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+    .product-content p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    /* ¿Por qué elegirnos? */
+    .why-us {
+      padding: 80px 0;
+      background: white;
+    }
+    .why-us ul {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .why-us li {
+      margin-bottom: 15px;
+      padding-left: 25px;
+      position: relative;
+    }
+    .why-us li::before {
+      content: "✓";
+      color: #003366;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* CTA Final */
+    .cta {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+      color: white;
+      text-align: center;
+    }
+    .cta h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+
+    /* Formulario */
+    .contact {
+      padding: 80px 0;
+      background: #f9f9f9;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #333;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .form-group textarea {
+      height: 100px;
+    }
+    .form-submit {
+      background: #FFD700;
+      color: #003366;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .form-submit:hover {
+      background: #e6c200;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .nav-links {
+        display: none;
+      }
+      .benefits-grid,
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">BMI <span>Protección & Crecimiento</span></div>
+        <div class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#productos">Productos</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <button class="lang-switch" onclick="alert('Versión en inglés disponible próximamente')">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <h1>Protege tu vida y haz crecer tu patrimonio</h1>
+      <p>Ofrecemos seguros de vida indexados al Nasdaq y S&P 500, y seguros de salud de alta calidad para ti y tu familia.</p>
+      <a href="#contacto" class="btn">Agenda tu asesoría gratuita</a>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="benefits" id="beneficios">
+    <div class="container">
+      <h2 class="section-title">Por qué nuestros clientes nos eligen</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3>Crecimiento con protección</h3>
+          <p>Tu seguro de vida crece con los mercados, pero sin riesgo de perder tu capital.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Protección total</h3>
+          <p>Garantizamos el futuro de tu familia, sin importar lo que pase.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🏥</div>
+          <h3>Cobertura médica global</h3>
+          <p>Acceso a los mejores hospitales y especialistas en EE.UU., Europa y Latinoamérica.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💬</div>
+          <h3>Asesoría personalizada</h3>
+          <p>Nuestro equipo te guía paso a paso para tomar la mejor decisión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section class="products" id="productos">
+    <div class="container">
+      <h2 class="section-title">Nuestros productos</h2>
+      <div class="products-grid">
+        <!-- Producto 1 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Seguro de vida indexado">
+          <div class="product-content">
+            <h3>Seguro de Vida Indexado</h3>
+            <p>Haz crecer tu inversión ligada al rendimiento del Nasdaq y S&P 500, con protección del capital y beneficios fiscales.</p>
+            <a href="#contacto" class="btn">Cotizar ahora</a>
+          </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Seguro de salud">
+          <div class="product-content">
+            <h3>Seguro de Salud Integral</h3>
+            <p>Cobertura médica amplia para ti y tu familia, con acceso a redes de hospitales de élite en múltiples países.</p>
+            <a href="#contacto" class="btn">Cotizar ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Por qué elegirnos? -->
+  <section class="why-us">
+    <div class="container">
+      <h2 class="section-title">¿Por qué elegirnos?</h2>
+      <ul>
+        <li>Somos agentes certificados con experiencia en seguros financieros innovadores.</li>
+        <li>Trabajamos con BMI, una compañía con sólida reputación internacional.</li>
+        <li>Enfocados en tu bienestar financiero y familiar, no solo en vender.</li>
+        <li>Te acompañamos en cada paso: desde la decisión hasta el servicio posventa.</li>
+        <li>Ofrecemos soluciones personalizadas, no productos estándar.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta">
+    <div class="container">
+      <h2>Listo para proteger tu futuro</h2>
+      <p>Agenda una asesoría gratuita y sin compromiso con uno de nuestros expertos.</p>
+      <a href="#contacto" class="btn">Habla con un asesor</a>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <h2 class="section-title">Contáctanos</h2>
+      <div class="form-container">
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono (con código de país)</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="product">Producto de interés</label>
+            <select id="product" name="product">
+              <option value="vida">Seguro de Vida Indexado</option>
+              <option value="salud">Seguro de Salud</option>
+              <option value="ambos">Ambos</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje (opcional)</label>
+            <textarea id="message" name="message" placeholder="Cuéntanos tus objetivos o dudas..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BMI Protección & Crecimiento. Todos los derechos reservados.</p>
+      <p>Operamos en EE.UU., Latinoamérica y España.</p>
+    </div>
+  </footer>
+
+  <!-- Script básico para el formulario (más adelante puedes conectarlo a un servicio) -->
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Gracias por tu mensaje. Un asesor se pondrá en contacto contigo pronto.');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
