@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nexum Insurance Agency | Protection & Growth</title>
+  <meta name="description" content="Life insurance with growth linked to Nasdaq and S&P 500, and global health coverage. Free advisory for Latin America, the Caribbean, Asia, and Europe." />
+  <link rel="stylesheet" href="style.css" />
+  //<link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Nexum <span>Protection & Growth</span></div>
+        <div class="nav-links">
+          <a href="#inicio">Home</a>
+          <a href="#beneficios">Benefits</a>
+          <a href="#productos">Products</a>
+          <a href="#contacto">Contact</a>
+        </div>
+        <button class="lang-switch" onclick="toggleLanguage()">ES</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <h1>Protect your life and grow your wealth</h1>
+      <p>We offer life insurance with growth linked to the Nasdaq and S&P 500, and high-quality global health coverage for you and your family.</p>
+      <a href="#contacto" class="btn">Schedule your free consultation</a>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="benefits" id="beneficios">
+    <div class="container">
+      <h2 class="section-title">Why our clients choose us</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3>Growth with protection</h3>
+          <p>Your life insurance grows through compound interest, linked to the performance of the Nasdaq and S&P 500, ensuring both protection and growth potential.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Complete protection</h3>
+          <p>We secure your family’s future, no matter what happens.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🏥</div>
+          <h3>Global medical coverage</h3>
+          <p>Access to top hospitals and specialists across Latin America, the Caribbean, Asia, and Europe.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💬</div>
+          <h3>Personalized advisory</h3>
+          <p>Our team guides you step by step to make the best decision for your future.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="productos">
+    <div class="container">
+      <h2 class="section-title">Our Products</h2>
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Life insurance with growth linked to Nasdaq and S&P 500">
+          <div class="product-content">
+            <h3>Market-Linked Life Insurance</h3>
+            <p>Grow your investment tied to the performance of the Nasdaq and S&P 500, with capital protection and tax advantages.</p>
+            <a href="#contacto" class="btn">Get a quote</a>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Health insurance">
+          <div class="product-content">
+            <h3>Comprehensive Health Insurance</h3>
+            <p>Broad medical coverage for you and your family, with access to elite hospital networks in multiple countries.</p>
+            <a href="#contacto" class="btn">Get a quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us? -->
+  <section class="why-us">
+    <div class="container">
+      <h2 class="section-title">Why choose us?</h2>
+      <ul>
+        <li>We are certified agents with experience in innovative financial insurance solutions.</li>
+        <li>We partner with BMI, a company with strong international reputation.</li>
+        <li>We are committed agents who provide full advisory focused on your financial and family well-being.</li>
+        <li>We’re with you every step of the way — from the beginning to after policy activation.</li>
+        <li>We offer customized solutions tailored to your unique needs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to secure your future?</h2>
+      <p>Schedule a free, no-obligation consultation with one of our experts.</p>
+      <a href="#contacto" class="btn">Speak with an advisor</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="form-container">
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone number (with country code)</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="product">Product of interest</label>
+            <select id="product" name="product">
+              <option value="vida">Life Insurance with Market Growth</option>
+              <option value="salud">Health Insurance</option>
+              <option value="ambos">Both</option>
+              <option value="otro">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" placeholder="Tell us about your goals or questions..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Nexum Agency. All rights reserved.</p>
+      <p>We operate in Latin America, the Caribbean, Asia, and Europe.</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Language toggle: redirects between Spanish and English versions
+    function toggleLanguage() {
+      const currentLang = document.documentElement.getAttribute('lang');
+      if (currentLang === 'es') {
+        window.location.href = 'index-en.html'; // Go to English
+      } else {
+        window.location.href = 'index.html'; // Go to Spanish
+      }
+    }
+
+    // Form submission feedback
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message. An advisor will contact you soon.');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
