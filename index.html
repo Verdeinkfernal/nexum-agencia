@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nexum Agencia de Seguros | Protección & Crecimiento</title>
-  <meta name="description" content="Seguros de vida indexados al Nasdaq y S&P 500, y seguros de salud para Latinoamérica, EE.UU. y España." />
+  <meta name="description" content="Seguros de vida con crecimiento vinculado al Nasdaq y S&P 500, y seguros de salud globales. Asesoría gratuita para Latinoamérica, El Caribe, Asia y Europa." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <!-- Google Fonts -->
@@ -32,7 +32,7 @@
   <section class="hero" id="inicio">
     <div class="container">
       <h1>Protege tu vida y haz crecer tu patrimonio</h1>
-      <p>Ofrecemos seguros de vida indexados al Nasdaq y S&P 500, y seguros de salud de alta calidad para ti y tu familia.</p>
+      <p>Ofrecemos seguros de vida con crecimiento vinculado al Nasdaq y S&P 500, y seguros de salud de alta calidad para ti y tu familia.</p>
       <a href="#contacto" class="btn">Agenda tu asesoría gratuita</a>
     </div>
   </section>
@@ -55,7 +55,7 @@
         <div class="benefit-card">
           <div class="benefit-icon">🏥</div>
           <h3>Cobertura médica global</h3>
-          <p>Acceso a los mejores hospitales y especialistas en EE.UU., Europa y Latinoamérica.</p>
+          <p>Acceso a los mejores hospitales y especialistas en Latinoamérica, El Caribe, Asia y Europa.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">💬</div>
@@ -73,9 +73,9 @@
       <div class="products-grid">
         <!-- Producto 1 -->
         <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Seguro de vida indexado">
+          <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Seguro de vida con crecimiento vinculado al Nasdaq y S&P 500">
           <div class="product-content">
-            <h3>Seguro de Vida Indexado</h3>
+            <h3>Seguro de Vida con Crecimiento en Bolsa</h3>
             <p>Haz crecer tu inversión ligada al rendimiento del Nasdaq y S&P 500, con protección del capital y beneficios fiscales.</p>
             <a href="#contacto" class="btn">Cotizar ahora</a>
           </div>
@@ -137,7 +137,7 @@
           <div class="form-group">
             <label for="product">Producto de interés</label>
             <select id="product" name="product">
-              <option value="vida">Seguro de Vida Indexado</option>
+              <option value="vida">Seguro de vida con crecimiento en bolsa</option>
               <option value="salud">Seguro de Salud</option>
               <option value="ambos">Ambos</option>
               <option value="otro">Otro</option>
@@ -157,15 +157,20 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 Nexum Agencia. Todos los derechos reservados.</p>
-      <p>Operamos en EE.UU., Latinoamérica y España.</p>
+      <p>Operamos en Latinoamérica, El Caribe, Asia y Europa.</p>
     </div>
   </footer>
 
   <!-- Script -->
   <script>
-    // Cambio de idioma (próximamente lo expandiremos a inglés)
+    // Control inteligente de cambio de idioma
     function toggleLanguage() {
-      alert("Versión en inglés disponible en breve. Próximamente activaremos el cambio de idioma.");
+      const currentLang = document.documentElement.getAttribute('lang');
+      if (currentLang === 'es') {
+        alert('Versión en inglés disponible próximamente. Estamos preparando una experiencia bilingüe para ti.');
+      } else {
+        alert('Spanish version coming soon.');
+      }
     }
 
     // Simulación de envío de formulario
