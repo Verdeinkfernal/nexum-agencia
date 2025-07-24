@@ -40,37 +40,45 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
+  color: white;
 }
 
 .logo span {
-  color: #FFD700;
+  color: #C0C0C0; /* Plateado profesional */
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 30px; /* Espacio prudencial entre enlaces */
+  align-items: center;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Evita que el texto se rompa o comprima */
 }
 
 .nav-links a:hover {
-  color: #FFD700;
+  color: #C0C0C0; /* Hover en plateado */
 }
 
 .lang-switch {
-  background: #FFD700;
-  color: #003366;
+  background: #C0C0C0; /* Botón de idioma en plateado */
+  color: #003366; /* Texto azul oscuro */
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.lang-switch:hover {
+  background: #A0A0A0; /* Oscurece un poco al pasar el mouse */
 }
 
 /* Hero */
@@ -95,20 +103,20 @@ nav {
 
 .btn {
   display: inline-block;
-  background: #FFD700;
-  color: #003366;
+  background: #3498DB; /* Azul claro profesional */
+  color: white; /* Texto blanco en botones */
   padding: 15px 30px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
-  transition: all 0.3s;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
 }
 
 /* Beneficios */
@@ -166,7 +174,7 @@ nav {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .product-card:hover {
@@ -280,19 +288,20 @@ nav {
 }
 
 .form-submit {
-  background: #FFD700;
-  color: #003366;
+  background: #3498DB;
+  color: white;
   border: none;
   padding: 15px 30px;
   font-size: 1.1rem;
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .form-submit:hover {
-  background: #e6c200;
+  background: #2980B9;
   transform: translateY(-2px);
 }
 
@@ -311,7 +320,7 @@ footer {
     font-size: 2.2rem;
   }
   .nav-links {
-    display: none;
+    display: none; /* Menú se oculta en móvil (futuro: menú hamburguesa) */
   }
   .benefits-grid,
   .products-grid {
