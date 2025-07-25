@@ -6,7 +6,6 @@
   <title>Nexum Insurance Agency | Protection & Growth</title>
   <meta name="description" content="Life insurance with growth linked to Nasdaq and S&P 500, and global health coverage. Free advisory for Latin America, the Caribbean, Asia, and Europe." />
   <link rel="stylesheet" href="style.css" />
-  //<link rel="icon" href="favicon.ico" type="image/x-icon" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
@@ -121,9 +120,7 @@
     <div class="container">
       <h2 class="section-title">Contact Us</h2>
       <div class="form-container">
-       
-
-       <form action="https://formsubmit.co/nexum.agency@outlook.com" method="POST">
+        <form action="https://formsubmit.co/nexum.agency@outlook.com" method="POST">
           <div class="form-group">
             <label for="name">Full name</label>
             <input type="text" id="name" name="name" required />
@@ -150,13 +147,11 @@
             <textarea id="message" name="message" placeholder="Tell us about your goals or questions..."></textarea>
           </div>
 
-
-<!-- Campos ocultos para mejorar la entrega -->
-  <input type="hidden" name="_subject" value="New contact message - Nexum Agency">
-  <input type="hidden" name="_cc" value="nexum.agency@outlook.com"> <!-- Copia al mismo correo -->
-  <input type="hidden" name="_next" value="https://nexum-agencia.netlify.app/gracias-en.html"> <!-- Página de agradecimiento (opcional) -->
-  <input type="hidden" name="_captcha" value="true"> <!-- Desactiva CAPTCHA si no lo necesitas -->
-
+          <!-- Campos ocultos corregidos -->
+          <input type="hidden" name="_subject" value="New contact message - Nexum Agency">
+          <input type="hidden" name="_cc" value="nexum.agency@outlook.com">
+          <input type="hidden" name="_next" value="https://nexum-agencia.netlify.app/">
+          <input type="hidden" name="_captcha" value="true">
 
           <button type="submit" class="form-submit">Send message</button>
         </form>
@@ -172,7 +167,7 @@
     </div>
   </footer>
 
-  <!-- Script -->
+  <!-- Script corregido -->
   <script>
     // Language toggle: redirects between Spanish and English versions
     function toggleLanguage() {
@@ -184,12 +179,8 @@
       }
     }
 
-    // Form submission feedback
-    document.querySelector('form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Thank you for your message. An advisor will contact you soon.');
-      this.reset();
-    });
+    // ⚠️ Eliminado: e.preventDefault() y alert()
+    // El formulario ahora se envía correctamente a FormSubmit
   </script>
 
 </body>

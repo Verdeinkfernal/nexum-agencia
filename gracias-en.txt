@@ -1,3 +1,0 @@
-<h1>¡Thanks for your message!</h1>
-<p>A Nexum advisor will contact you shortly.</p>
-<a href="https://nexum-agencia.netlify.app">Volver al inicio</a>

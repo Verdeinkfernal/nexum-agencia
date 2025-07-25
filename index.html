@@ -6,7 +6,6 @@
   <title>Nexum Agencia de Seguros | Protección & Crecimiento</title>
   <meta name="description" content="Seguros de vida con crecimiento vinculado al Nasdaq y S&P 500, y seguros de salud globales. Asesoría gratuita para Latinoamérica, El Caribe, Asia y Europa." />
   <link rel="stylesheet" href="style.css" />
-  //<link rel="icon" href="favicon.ico" type="image/x-icon" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
@@ -121,7 +120,6 @@
     <div class="container">
       <h2 class="section-title">Contáctanos</h2>
       <div class="form-container">
-
         <form action="https://formsubmit.co/nexum.agency@outlook.com" method="POST">
           <div class="form-group">
             <label for="name">Nombre completo</label>
@@ -149,12 +147,11 @@
             <textarea id="message" name="message" placeholder="Cuéntanos tus objetivos o dudas..."></textarea>
           </div>
 
-
-<!-- Campos ocultos para mejorar la entrega -->
-  <input type="hidden" name="_subject" value="Nuevo mensaje de contacto - Nexum Agencia">
-  <input type="hidden" name="_cc" value="nexum.agency@outlook.com"> <!-- Copia al mismo correo -->
-  <input type="hidden" name="_next" value="https://nexum-agencia.netlify.app/gracias.html"> <!-- Página de agradecimiento (opcional) -->
-  <input type="hidden" name="_captcha" value="true"> <!-- Desactiva CAPTCHA si no lo necesitas -->
+          <!-- Campos ocultos corregidos -->
+          <input type="hidden" name="_subject" value="Nuevo mensaje de contacto - Nexum Agencia">
+          <input type="hidden" name="_cc" value="nexum.agency@outlook.com">
+          <input type="hidden" name="_next" value="https://nexum-agencia.netlify.app/">
+          <input type="hidden" name="_captcha" value="true">
 
           <button type="submit" class="form-submit">Enviar mensaje</button>
         </form>
@@ -170,27 +167,21 @@
     </div>
   </footer>
 
-  <!-- Script -->
+  <!-- Script corregido -->
   <script>
-  // Función mejorada para cambio de idioma
-  function toggleLanguage() {
-    const currentLang = document.documentElement.getAttribute('lang');
-    if (currentLang === 'es') {
-      // Si está en español, ir a la versión en inglés
-      window.location.href = 'index-en.html';
-    } else {
-      // Si está en inglés, ir a la versión en español
-      window.location.href = 'index.html';
+    // Función mejorada para cambio de idioma
+    function toggleLanguage() {
+      const currentLang = document.documentElement.getAttribute('lang');
+      if (currentLang === 'es') {
+        window.location.href = 'index-en.html'; // Ir a inglés
+      } else {
+        window.location.href = 'index.html'; // Ir a español
+      }
     }
-  }
 
-  // Formulario: mensaje de confirmación
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Gracias por tu mensaje. Un asesor se pondrá en contacto contigo pronto.');
-    this.reset();
-  });
-</script>
+    // ⚠️ Eliminado: e.preventDefault() y alert()
+    // El formulario ahora se envía correctamente a FormSubmit
+  </script>
 
 </body>
 </html>
