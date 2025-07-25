@@ -161,7 +161,7 @@
           <input type="hidden" name="_next" value="https://nexum-agencia.netlify.app/gracias-en.html">
           <input type="hidden" name="_captcha" value="true">
 
-          <button type="submit" class="form-submit">Send message</button>
+          <button type="submit" class="form-submit" id="submit-contact-form">Send message</button>
         </form>
       </div>
     </div>
@@ -177,19 +177,35 @@
 
   <!-- Script corregido -->
   <script>
-    // Language toggle: redirects between Spanish and English versions
-    function toggleLanguage() {
-      const currentLang = document.documentElement.getAttribute('lang');
-      if (currentLang === 'es') {
-        window.location.href = 'index-en.html'; // Go to English
-      } else {
-        window.location.href = 'index.html'; // Go to Spanish
-      }
-    }
+  // Google Analytics 4 - Configuración base
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN6BGQQ9NE');
 
-    // ⚠️ Eliminado: e.preventDefault() y alert()
-    // El formulario ahora se envía correctamente a FormSubmit
-  </script>
+  // Evento personalizado: cuando se envía el formulario
+  document.addEventListener('DOMContentLoaded', function () {
+    const submitButton = document.getElementById('submit-contact-form');
+    if (submitButton) {
+      submitButton.addEventListener('click', function () {
+        gtag('event', 'form_submit', {
+          'event_category': 'Formulario',
+          'event_label': 'Contacto_Nexum'
+        });
+      });
+    }
+  });
+
+  // Función para cambio de idioma entre español e inglés
+  function toggleLanguage() {
+    const currentLang = document.documentElement.getAttribute('lang');
+    if (currentLang === 'es') {
+      window.location.href = 'index-en.html'; // Ir a versión en inglés
+    } else {
+      window.location.href = 'index.html'; // Ir a versión en español
+    }
+  }
+</script>
 
 </body>
 </html>
