@@ -121,7 +121,9 @@
     <div class="container">
       <h2 class="section-title">Contact Us</h2>
       <div class="form-container">
-        <form action="#" method="POST">
+       
+
+       <form action="https://formsubmit.co/nexum.agency@outlook.com" method="POST">
           <div class="form-group">
             <label for="name">Full name</label>
             <input type="text" id="name" name="name" required />
@@ -147,6 +149,15 @@
             <label for="message">Message (optional)</label>
             <textarea id="message" name="message" placeholder="Tell us about your goals or questions..."></textarea>
           </div>
+
+
+<!-- Campos ocultos para mejorar la entrega -->
+  <input type="hidden" name="_subject" value="New contact message - Nexum Agency">
+  <input type="hidden" name="_cc" value="nexum.agency@outlook.com"> <!-- Copia al mismo correo -->
+  <input type="hidden" name="_next" value="https://nexum-agencia.netlify.app/gracias-en.html"> <!-- Página de agradecimiento (opcional) -->
+  <input type="hidden" name="_captcha" value="true"> <!-- Desactiva CAPTCHA si no lo necesitas -->
+
+
           <button type="submit" class="form-submit">Send message</button>
         </form>
       </div>
