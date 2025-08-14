@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nexum Insurance Agency | Protection & Growth</title>
+  <title>Nexum Financial Advisors | Protection & Growth</title>
   <meta name="description" content="Life insurance with growth linked to Nasdaq and S&P 500, and global health coverage. Free advisory for Latin America, the Caribbean, Asia, and Europe." />
   <link rel="stylesheet" href="style.css" />
   <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN6BGQQ9NE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KN6BGQQ9NE');
-</script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN6BGQQ9NE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KN6BGQQ9NE');
+  </script>
 </head>
 <body>
 
@@ -23,11 +24,13 @@
   <header>
     <div class="container">
       <nav>
-        <div class="logo">Nexum <span>Protection & Growth</span></div>
+        <div class="logo">Nexum   <span> - Financial Advisors</span></div>
         <div class="nav-links">
           <a href="#inicio">Home</a>
           <a href="#beneficios">Benefits</a>
           <a href="#productos">Products</a>
+          <a href="/educa/">Education</a>
+          <a href="#trabaja">Work with Us</a>
           <a href="#contacto">Contact</a>
         </div>
         <button class="lang-switch" onclick="toggleLanguage()">ES</button>
@@ -39,7 +42,7 @@
   <section class="hero" id="inicio">
     <div class="container">
       <h1>Protect your life and grow your wealth</h1>
-      <p>We offer life insurance with growth linked to the Nasdaq and S&P 500, and high-quality global health coverage for you and your family.</p>
+      <p>We offer advisory on life insurance with growth linked to the Nasdaq and S&P 500, and high-quality global health coverage for you and your family.</p>
       <a href="#contacto" class="btn">Schedule your free consultation</a>
     </div>
   </section>
@@ -107,10 +110,19 @@
       <ul>
         <li>We are certified agents with experience in innovative financial insurance solutions.</li>
         <li>We partner with BMI, a company with strong international reputation.</li>
-        <li>We are committed agents who provide full advisory focused on your financial and family well-being.</li>
+        <li>We are committed advisors who provide full advisory focused on your financial and family well-being.</li>
         <li>We’re with you every step of the way — from the beginning to after policy activation.</li>
         <li>We offer customized solutions tailored to your unique needs.</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Work with Us -->
+  <section class="cta" id="trabaja">
+    <div class="container">
+      <h2>Want to join our team?</h2>
+      <p>We’re looking for financial advisors who are passionate about excellence, ethics, and long-term growth. If you love helping others secure their future, we want to meet you.</p>
+      <a href="#contacto" class="btn">Join Nexum</a>
     </div>
   </section>
 
@@ -155,8 +167,8 @@
             <textarea id="message" name="message" placeholder="Tell us about your goals or questions..."></textarea>
           </div>
 
-          <!-- Campos ocultos corregidos -->
-          <input type="hidden" name="_subject" value="New contact message - Nexum Agency">
+          <!-- Hidden fields -->
+          <input type="hidden" name="_subject" value="New contact message - Nexum Financial Advisors">
           <input type="hidden" name="_cc" value="nexum.agency@outlook.com">
           <input type="hidden" name="_next" value="https://nexum-agencia.netlify.app/gracias-en.html">
           <input type="hidden" name="_captcha" value="true">
@@ -170,42 +182,42 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Nexum Agency. All rights reserved.</p>
+      <p>&copy; 2025 Nexum Financial Advisors. All rights reserved.</p>
       <p>We operate in Latin America, the Caribbean, Asia, and Europe.</p>
     </div>
   </footer>
 
-  <!-- Script corregido -->
+  <!-- Script -->
   <script>
-  // Google Analytics 4 - Configuración base
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KN6BGQQ9NE');
+    // Google Analytics 4 - Configuración base
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KN6BGQQ9NE');
 
-  // Evento personalizado: cuando se envía el formulario
-  document.addEventListener('DOMContentLoaded', function () {
-    const submitButton = document.getElementById('submit-contact-form');
-    if (submitButton) {
-      submitButton.addEventListener('click', function () {
-        gtag('event', 'form_submit', {
-          'event_category': 'Formulario',
-          'event_label': 'Contacto_Nexum'
+    // Evento personalizado: cuando se envía el formulario
+    document.addEventListener('DOMContentLoaded', function () {
+      const submitButton = document.getElementById('submit-contact-form');
+      if (submitButton) {
+        submitButton.addEventListener('click', function () {
+          gtag('event', 'form_submit', {
+            'event_category': 'Formulario',
+            'event_label': 'Contacto_Nexum'
+          });
         });
-      });
-    }
-  });
+      }
+    });
 
-  // Función para cambio de idioma entre español e inglés
-  function toggleLanguage() {
-    const currentLang = document.documentElement.getAttribute('lang');
-    if (currentLang === 'es') {
-      window.location.href = 'index-en.html'; // Ir a versión en inglés
-    } else {
-      window.location.href = 'index.html'; // Ir a versión en español
+    // Función para cambio de idioma entre inglés y español
+    function toggleLanguage() {
+      const currentLang = document.documentElement.getAttribute('lang');
+      if (currentLang === 'es') {
+        window.location.href = 'index-en.html';
+      } else {
+        window.location.href = 'index.html';
+      }
     }
-  }
-</script>
+  </script>
 
 </body>
 </html>

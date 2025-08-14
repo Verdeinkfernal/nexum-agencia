@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nexum Agencia de Seguros | Protección & Crecimiento</title>
-  <meta name="description" content="Seguros de vida con crecimiento vinculado al Nasdaq y S&P 500, y seguros de salud globales. Asesoría gratuita para Latinoamérica, El Caribe, Asia y Europa." />
+  <title>Nexum Asesores Financieros | Protección & Crecimiento</title>
+  <meta name="description" content="Asesoría en seguros de vida con crecimiento vinculado al Nasdaq y S&P 500, y seguros de salud globales. Gratuita para Latinoamérica, El Caribe, Asia y Europa." />
   <link rel="stylesheet" href="style.css" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN6BGQQ9NE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KN6BGQQ9NE');
-</script>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN6BGQQ9NE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KN6BGQQ9NE');
+  </script>
 </head>
 <body>
 
@@ -23,11 +24,13 @@
   <header>
     <div class="container">
       <nav>
-        <div class="logo">Nexum <span>Protección & Crecimiento</span></div>
+        <div class="logo">Nexum   <span> - Asesores Financieros</span></div>
         <div class="nav-links">
           <a href="#inicio">Inicio</a>
           <a href="#beneficios">Beneficios</a>
           <a href="#productos">Productos</a>
+          <a href="/educa/">Educación</a>
+          <a href="#trabaja">Trabaja con nosotros</a>
           <a href="#contacto">Contacto</a>
         </div>
         <button class="lang-switch" onclick="toggleLanguage()">EN</button>
@@ -39,7 +42,7 @@
   <section class="hero" id="inicio">
     <div class="container">
       <h1>Protege tu vida y haz crecer tu patrimonio</h1>
-      <p>Ofrecemos seguros de vida con crecimiento vinculado al Nasdaq y S&P 500, y seguros de salud de alta calidad para ti y tu familia.</p>
+      <p>Ofrecemos asesoría en seguros de vida con crecimiento vinculado al Nasdaq y S&P 500, y seguros de salud de alta calidad para ti y tu familia.</p>
       <a href="#contacto" class="btn">Agenda tu asesoría gratuita</a>
     </div>
   </section>
@@ -107,10 +110,19 @@
       <ul>
         <li>Somos agentes certificados con experiencia en seguros financieros innovadores.</li>
         <li>Trabajamos con BMI, una compañía con sólida reputación internacional.</li>
-        <li>Somos agentes comprometidos que brindamos una asesoría completa, orientada a tu bienestar financiero y familiar.</li>
+        <li>Somos asesores comprometidos que brindamos una asesoría completa, orientada a tu bienestar financiero y familiar.</li>
         <li>Estamos contigo en todo momento: desde el inicio del proceso hasta después de la contratación.</li>
         <li>Ofrecemos soluciones personalizadas que se adaptan a tus necesidades únicas.</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Trabaja con nosotros -->
+  <section class="cta" id="trabaja">
+    <div class="container">
+      <h2>¿Quieres ser parte de nuestro equipo?</h2>
+      <p>Buscamos asesores financieros comprometidos con la excelencia, la ética y el crecimiento continuo. Si te apasiona ayudar a otros a proteger su futuro, queremos conocerte.</p>
+      <a href="#contacto" class="btn">Únete a Nexum</a>
     </div>
   </section>
 
@@ -156,7 +168,7 @@
           </div>
 
           <!-- Campos ocultos corregidos -->
-          <input type="hidden" name="_subject" value="Nuevo mensaje de contacto - Nexum Agencia">
+          <input type="hidden" name="_subject" value="Nuevo mensaje de contacto - Nexum Asesores">
           <input type="hidden" name="_cc" value="nexum.agency@outlook.com">
           <input type="hidden" name="_next" value="https://nexum-agencia.netlify.app/gracias.html">
           <input type="hidden" name="_captcha" value="true">
@@ -170,42 +182,42 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Nexum Agencia. Todos los derechos reservados.</p>
+      <p>&copy; 2025 Nexum Asesores Financieros. Todos los derechos reservados.</p>
       <p>Operamos en Latinoamérica, El Caribe, Asia y Europa.</p>
     </div>
   </footer>
 
   <!-- Script corregido -->
   <script>
-  // Google Analytics 4 - Configuración base
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KN6BGQQ9NE');
+    // Google Analytics 4 - Configuración base
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KN6BGQQ9NE');
 
-  // Evento personalizado: cuando se envía el formulario
-  document.addEventListener('DOMContentLoaded', function () {
-    const submitButton = document.getElementById('submit-contact-form');
-    if (submitButton) {
-      submitButton.addEventListener('click', function () {
-        gtag('event', 'form_submit', {
-          'event_category': 'Formulario',
-          'event_label': 'Contacto_Nexum'
+    // Evento personalizado: cuando se envía el formulario
+    document.addEventListener('DOMContentLoaded', function () {
+      const submitButton = document.getElementById('submit-contact-form');
+      if (submitButton) {
+        submitButton.addEventListener('click', function () {
+          gtag('event', 'form_submit', {
+            'event_category': 'Formulario',
+            'event_label': 'Contacto_Nexum'
+          });
         });
-      });
-    }
-  });
+      }
+    });
 
-  // Función para cambio de idioma entre español e inglés
-  function toggleLanguage() {
-    const currentLang = document.documentElement.getAttribute('lang');
-    if (currentLang === 'es') {
-      window.location.href = 'index-en.html'; // Ir a versión en inglés
-    } else {
-      window.location.href = 'index.html'; // Ir a versión en español
+    // Función para cambio de idioma entre español e inglés
+    function toggleLanguage() {
+      const currentLang = document.documentElement.getAttribute('lang');
+      if (currentLang === 'es') {
+        window.location.href = 'index-en.html'; // Ir a versión en inglés
+      } else {
+        window.location.href = 'index.html'; // Ir a versión en español
+      }
     }
-  }
-</script>
+  </script>
 
 </body>
 </html>

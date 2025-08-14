@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial Education | Nexum Financial Advisors</title>
+  <meta name="description" content="Learn about personal finance, wealth growth, insurance, and strategic planning with clear and practical guides." />
+  <link rel="stylesheet" href="../style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Alex Brush Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* Ajuste para evitar que el header tape el contenido */
+    .main-content {
+      margin-top: 80px;
+    }
+    @media (max-width: 768px) {
+      .main-content {
+        margin-top: 70px;
+      }
+    }
+
+    /* Estilos específicos para el logo con Alex Brush */
+    .logo span {
+      font-family: 'Alex Brush', cursive;
+      font-size: 1.1rem;
+      color: #0A2E5D;
+      letter-spacing: 0.8px;
+      font-weight: 400;
+    }
+
+    /* Estilos de la sección de educación */
+    .education-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 40px auto 30px;
+    }
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 30px 0;
+    }
+    .guide-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .guide-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+    }
+    .guide-card h3 {
+      color: #0A2E5D;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    .guide-card p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    .btn-cta {
+      display: inline-block;
+      background-color: #0A2E5D;
+      color: white;
+      padding: 14px 28px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-align: center;
+      margin: 40px auto;
+      max-width: 300px;
+      transition: background-color 0.3s;
+    }
+    .btn-cta:hover {
+      background-color: #08234a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Nexum <span>Financial Advisors</span></div>
+        <div class="nav-links">
+          <a href="../">Home</a>
+          <a href="../#beneficios">Benefits</a>
+          <a href="../#productos">Products</a>
+          <a href="#guides">Guides</a>
+          <a href="../#trabaja">Work with Us</a>
+          <a href="../#contacto">Contact</a>
+        </div>
+        <button class="lang-switch" onclick="toggleLanguage()">ES</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <section class="education">
+      <div class="container">
+        <div class="education-intro">
+          <h1>Financial Education</h1>
+          <p>At Nexum, we believe smart decisions start with clear information. Here you’ll find simple guides to understand your money, protect your future, and grow your wealth with confidence.</p>
+        </div>
+
+        <div class="guides-grid" id="guides">
+          <!-- Guide 1 -->
+          <div class="guide-card">
+            <h3>What is compound interest?</h3>
+            <p>Discover how your money can grow exponentially over time, even with small savings. A key concept for long-term growth.</p>
+          </div>
+
+          <!-- Guide 2 -->
+          <div class="guide-card">
+            <h3>Emergency fund: how much do you need?</h3>
+            <p>Learn why having a financial cushion is the first step to stability, and how to start today, no matter your current situation.</p>
+          </div>
+
+          <!-- Guide 3 -->
+          <div class="guide-card">
+            <h3>Good debt vs. bad debt</h3>
+            <p>Not all debt is bad. We explain the difference and how to use it strategically without risking your future.</p>
+          </div>
+
+          <!-- Guide 4 -->
+          <div class="guide-card">
+            <h3>What is a market-linked life insurance?</h3>
+            <p>Insurance isn’t just protection—it can be a growth tool. We explain how policies linked to the Nasdaq and S&P 500 work.</p>
+          </div>
+
+          <!-- Guide 5 -->
+          <div class="guide-card">
+            <h3>Inflation: the silent enemy</h3>
+            <p>Did you know your money loses value every year? Understand how inflation affects your savings and what you can do to protect yourself.</p>
+          </div>
+
+          <!-- Guide 6 -->
+          <div class="guide-card">
+            <h3>Financial plan: your roadmap</h3>
+            <p>A financial plan isn’t just for the wealthy. It’s for anyone who wants to take control of their future. We’ll show you where to start.</p>
+          </div>
+        </div>
+
+        <!-- CTA Final -->
+        <div style="text-align: center;">
+          <p><strong>Want to apply these principles to your life?</strong></p>
+          <a href="../#contacto" class="btn-cta">Schedule your free consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Nexum Financial Advisors. All rights reserved.</p>
+      <p>We operate in Latin America, the Caribbean, Asia, and Europe.</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Función para cambio de idioma
+    function toggleLanguage() {
+      window.location.href = '../index.html';
+    }
+  </script>
+
+</body>
+</html>
