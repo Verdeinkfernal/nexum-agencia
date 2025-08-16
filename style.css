@@ -21,7 +21,7 @@ body {
 
 /* === HEADER CON ALTO CONTRASTE === */
 header {
-  background-color: #FFFFFF; /* Fondo blanco para destacar el logo */
+  background-color: #FFFFFF;
   color: #333333;
   padding: 15px 0;
   position: fixed;
@@ -45,10 +45,11 @@ nav {
   gap: 8px;
   text-decoration: none;
   font-weight: 700;
+  white-space: nowrap; /* Evita que el texto se rompa */
 }
 
 .logo-img {
-  height: 32px; /* Tamaño acoplado definitivo */
+  height: 32px;
   width: auto;
 }
 
@@ -56,7 +57,7 @@ nav {
 .logo span {
   font-family: 'Alex Brush', cursive;
   font-size: 2rem;
-  color: #0A2540; /* Azul marino profundo, coincide con el logo */
+  color: #0A2540;
   letter-spacing: 0.1px;
   font-weight: 500;
 }
@@ -77,11 +78,11 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #3A6EA5; /* Azul claro suave */
+  color: #3A6EA5;
 }
 
 .lang-switch {
-  background: #0A2540; /* Azul marino */
+  background: #0A2540;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -118,7 +119,7 @@ nav {
 
 .btn {
   display: inline-block;
-  background: #3A6EA5; /* Azul claro suave */
+  background: #3A6EA5;
   color: white;
   padding: 15px 30px;
   border-radius: 50px;
@@ -331,7 +332,7 @@ footer {
 
 /* === SECCIÓN: EDUCACIÓN FINANCIERA === */
 .main-content {
-  margin-top: 90px; /* Ajuste para header fijo */
+  margin-top: 90px;
 }
 
 @media (max-width: 768px) {
@@ -340,7 +341,6 @@ footer {
   }
 }
 
-/* Sección de educación */
 .education-intro {
   text-align: center;
   max-width: 800px;
@@ -359,7 +359,6 @@ footer {
   line-height: 1.6;
 }
 
-/* Grid de guías */
 .guides-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -392,7 +391,6 @@ footer {
   font-size: 0.95rem;
 }
 
-/* CTA Final */
 .btn-cta {
   display: inline-block;
   background-color: #0A2540;
@@ -411,14 +409,50 @@ footer {
   background-color: #082038;
 }
 
-/* Responsive */
+/* === RESPUESTIVO: Correcciones clave === */
+
+/* Evita que "Asesores Financieros" se rompa en móvil */
+.logo {
+  white-space: nowrap;
+}
+
+/* Menú responsive: no desaparece, se desliza si no cabe */
 @media (max-width: 768px) {
+  .logo span {
+    font-size: 1.8rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f1f1f1;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .nav-links::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .nav-links::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+
   .hero h1 {
     font-size: 2.2rem;
   }
-  .nav-links {
-    display: none;
+
+  .hero {
+    padding: 160px 0 100px;
   }
+
   .benefits-grid,
   .products-grid,
   .guides-grid {
