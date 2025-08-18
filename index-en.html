@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nexum Financial Advisors | Protection & Growth</title>
-  <meta name="description" content="Life insurance with growth linked to Nasdaq and S&P 500, and global health coverage. Free advisory for Latin America, the Caribbean, Asia, and Europe." />
+  <meta name="description" content="Life insurance with growth linked to Nasdaq and S&P 500, and global health insurance. Free consultation for Latin America, the Caribbean, Asia and Europe." />
   <link rel="stylesheet" href="/style.css" />
   
   <!-- Google Fonts -->
@@ -25,10 +25,10 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
   <link rel="manifest" href="/favicons/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#0A2540">
   <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  
+  <meta name="theme-color" content="#0A2540">
+
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN6BGQQ9NE"></script>
   <script>
@@ -44,28 +44,40 @@
   <header>
     <div class="container">
       <nav>
+        <!-- Logo alineado a la izquierda -->
         <a href="/" class="logo">
-          <img src="/logo-nexum.png" alt="Nexum Asesores Financieros" class="logo-img">
-          <span>Financial Advisors </span>
-          </a>
+          <img src="/logo-nexum.png" alt="Nexum Financial Advisors" class="logo-img">
+          <span> - Financial Advisors</span>
+        </a>
+
+        <!-- Menú de navegación -->
         <div class="nav-links">
           <a href="#inicio">Home</a>
           <a href="#beneficios">Benefits</a>
           <a href="#productos">Products</a>
-          <a href="/educa/index-en.html">Education</a>
-          <a href="#trabaja">Work with Us</a>
+          <a href="/educa/">Education</a>
+          <a href="#trabaja">Work with us</a>
           <a href="#contacto">Contact</a>
         </div>
-        <button class="lang-switch" onclick="toggleLanguage()">ES</button>
+
+        <!-- Botón hamburguesa (móvil) -->
+        <button class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </div>
+
+    <!-- Botón de cambio a español: flotante en esquina inferior izquierda -->
+    <a href="index.html" class="lang-switch" aria-label="Versión en español">ES</a>
   </header>
 
   <!-- Hero -->
   <section class="hero" id="inicio">
     <div class="container">
       <h1>Protect your life and grow your wealth</h1>
-      <p>We offer advisory on life insurance with growth linked to the Nasdaq and S&P 500, and high-quality global health coverage for you and your family.</p>
+      <p>We offer life insurance with growth linked to the Nasdaq and S&P 500, and high-quality health insurance for you and your family.</p>
       <a href="#contacto" class="btn">Schedule your free consultation</a>
     </div>
   </section>
@@ -78,22 +90,22 @@
         <div class="benefit-card">
           <div class="benefit-icon">📈</div>
           <h3>Growth with protection</h3>
-          <p>Your life insurance grows through compound interest, linked to the performance of the Nasdaq and S&P 500, ensuring both protection and growth potential.</p>
+          <p>Your life insurance grows with the power of compound interest, linked to the performance of the Nasdaq and S&P 500, ensuring both protection and growth potential.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🛡️</div>
-          <h3>Complete protection</h3>
-          <p>We secure your family’s future, no matter what happens.</p>
+          <h3>Total protection</h3>
+          <p>We guarantee your family's future, no matter what happens.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">🏥</div>
-          <h3>Global medical coverage</h3>
-          <p>Access to top hospitals and specialists across Latin America, the Caribbean, Asia, and Europe.</p>
+          <h3>Global health coverage</h3>
+          <p>Access to top hospitals and specialists in Latin America, the Caribbean, Asia and Europe.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon">💬</div>
-          <h3>Personalized advisory</h3>
-          <p>Our team guides you step by step to make the best decision for your future.</p>
+          <h3>Personalized advice</h3>
+          <p>Our team guides you step by step to make the best decision.</p>
         </div>
       </div>
     </div>
@@ -102,23 +114,23 @@
   <!-- Products -->
   <section class="products" id="productos">
     <div class="container">
-      <h2 class="section-title">Our Products</h2>
+      <h2 class="section-title">Our products</h2>
       <div class="products-grid">
-        <!-- Product 1 -->
+        <!-- Producto 1 -->
         <div class="product-card">
           <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Life insurance with growth linked to Nasdaq and S&P 500">
           <div class="product-content">
-            <h3>Market-Linked Life Insurance</h3>
-            <p>Grow your investment tied to the performance of the Nasdaq and S&P 500, with capital protection and tax advantages.</p>
+            <h3>Life Insurance with Stock Market Growth</h3>
+            <p>Grow your investment linked to the performance of the Nasdaq and S&P 500, with capital protection and tax benefits.</p>
             <a href="#contacto" class="btn">Get a quote</a>
           </div>
         </div>
-        <!-- Product 2 -->
+        <!-- Producto 2 -->
         <div class="product-card">
           <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Health insurance">
           <div class="product-content">
             <h3>Comprehensive Health Insurance</h3>
-            <p>Broad medical coverage for you and your family, with access to elite hospital networks in multiple countries.</p>
+            <p>Extensive medical coverage for you and your family, with access to elite hospital networks in multiple countries.</p>
             <a href="#contacto" class="btn">Get a quote</a>
           </div>
         </div>
@@ -126,25 +138,25 @@
     </div>
   </section>
 
-  <!-- Why Choose Us? -->
+  <!-- Why choose us? -->
   <section class="why-us">
     <div class="container">
       <h2 class="section-title">Why choose us?</h2>
       <ul>
-        <li>We are certified agents with experience in innovative financial insurance solutions.</li>
-        <li>We partner with BMI, a company with strong international reputation.</li>
-        <li>We are committed advisors who provide full advisory focused on your financial and family well-being.</li>
-        <li>We’re with you every step of the way — from the beginning to after policy activation.</li>
-        <li>We offer customized solutions tailored to your unique needs.</li>
+        <li>We are certified agents with experience in innovative financial insurance.</li>
+        <li>We work with BMI, a company with solid international reputation.</li>
+        <li>We are committed advisors who provide complete guidance focused on your financial and family well-being.</li>
+        <li>We are with you every step of the way: from the beginning of the process to after contracting.</li>
+        <li>We offer customized solutions that adapt to your unique needs.</li>
       </ul>
     </div>
   </section>
 
-  <!-- Work with Us -->
+  <!-- Work with us -->
   <section class="cta" id="trabaja">
     <div class="container">
       <h2>Want to join our team?</h2>
-      <p>We’re looking for financial advisors who are passionate about excellence, ethics, and long-term growth. If you love helping others secure their future, we want to meet you.</p>
+      <p>We are looking for financial advisors committed to excellence, ethics and continuous growth. If you're passionate about helping others protect their future, we want to meet you.</p>
       <a href="#contacto" class="btn">Join Nexum</a>
     </div>
   </section>
@@ -152,16 +164,16 @@
   <!-- Final CTA -->
   <section class="cta">
     <div class="container">
-      <h2>Ready to secure your future?</h2>
+      <h2>Ready to protect your future</h2>
       <p>Schedule a free, no-obligation consultation with one of our experts.</p>
-      <a href="#contacto" class="btn">Speak with an advisor</a>
+      <a href="#contacto" class="btn">Talk to an advisor</a>
     </div>
   </section>
 
   <!-- Contact -->
   <section class="contact" id="contacto">
     <div class="container">
-      <h2 class="section-title">Contact Us</h2>
+      <h2 class="section-title">Contact us</h2>
       <div class="form-container">
         <form action="https://formsubmit.co/nexum.agency@outlook.com" method="POST">
           <div class="form-group">
@@ -169,17 +181,17 @@
             <input type="text" id="name" name="name" required />
           </div>
           <div class="form-group">
-            <label for="email">Email address</label>
+            <label for="email">Email</label>
             <input type="email" id="email" name="email" required />
           </div>
           <div class="form-group">
-            <label for="phone">Phone number (with country code)</label>
+            <label for="phone">Phone (with country code)</label>
             <input type="tel" id="phone" name="phone" required />
           </div>
           <div class="form-group">
             <label for="product">Product of interest</label>
             <select id="product" name="product">
-              <option value="vida">Life Insurance with Market Growth</option>
+              <option value="vida">Life Insurance with Stock Market Growth</option>
               <option value="salud">Health Insurance</option>
               <option value="ambos">Both</option>
               <option value="otro">Other</option>
@@ -187,11 +199,11 @@
           </div>
           <div class="form-group">
             <label for="message">Message (optional)</label>
-            <textarea id="message" name="message" placeholder="Tell us about your goals or questions..."></textarea>
+            <textarea id="message" name="message" placeholder="Tell us your goals or questions..."></textarea>
           </div>
 
-          <!-- Hidden fields -->
-          <input type="hidden" name="_subject" value="New contact message - Nexum Financial Advisors">
+          <!-- Campos ocultos corregidos -->
+          <input type="hidden" name="_subject" value="New contact message - Nexum Advisors">
           <input type="hidden" name="_cc" value="nexum.agency@outlook.com">
           <input type="hidden" name="_next" value="https://nexum-agencia.netlify.app/gracias-en.html">
           <input type="hidden" name="_captcha" value="true">
@@ -206,7 +218,7 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 Nexum Financial Advisors. All rights reserved.</p>
-      <p>We operate in Latin America, the Caribbean, Asia, and Europe.</p>
+      <p>We operate in Latin America, the Caribbean, Asia and Europe.</p>
     </div>
   </footer>
 
@@ -231,7 +243,7 @@
       }
     });
 
-    // Función para cambio de idioma entre inglés y español
+    // Función para cambio de idioma
     function toggleLanguage() {
       const currentLang = document.documentElement.getAttribute('lang');
       if (currentLang === 'es') {
@@ -240,6 +252,23 @@
         window.location.href = 'index.html';
       }
     }
+
+    // Menú hamburguesa
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Cierra el menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
   </script>
 
 </body>

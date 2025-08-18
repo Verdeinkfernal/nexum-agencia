@@ -34,6 +34,7 @@ header {
 
 nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1200px;
@@ -49,7 +50,7 @@ nav {
   text-decoration: none;
   font-weight: 700;
   white-space: nowrap;
-  z-index: 10;
+  flex-shrink: 0;
 }
 
 .logo-img {
@@ -65,7 +66,7 @@ nav {
   font-weight: 400;
 }
 
-/* Menú de navegación (escritorio) */
+/* === MENÚ DE ESCRITORIO === */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -85,45 +86,49 @@ nav {
   color: #3A6EA5;
 }
 
-/* Botón hamburguesa (solo en móvil) */
+/* === MENÚ MÓVIL === */
 .menu-toggle {
   display: none;
-  flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px 6px;
-  width: 40px;
-  height: 40px;
-  z-index: 1001;
 }
 
-.menu-toggle span {
-  width: 28px;
-  height: 3px;
-  background-color: #333333;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-}
-
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 6px);
-}
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -6px);
-}
-
-/* Menú en móvil */
+/* Botón hamburguesa: solo en móvil */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 6px;
+    width: 40px;
+    height: 40px;
+    z-index: 1001;
   }
 
+  .menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background-color: #333333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+
+  /* Menú desplegable en móvil */
   .nav-links {
     position: fixed;
     top: 0;
@@ -145,6 +150,11 @@ nav {
 
   .nav-links.active {
     left: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.3rem;
+    color: #0A2540;
   }
 }
 
@@ -408,94 +418,40 @@ footer {
   font-size: 0.9rem;
 }
 
-/* === SECCIÓN: EDUCACIÓN FINANCIERA === */
-.main-content {
-  margin-top: 90px;
-}
-
+/* === RESPUESTIVO: Optimización para móvil === */
 @media (max-width: 768px) {
-  .main-content {
-    margin-top: 70px;
+  /* Ajuste de tamaño en móvil */
+  .logo-img {
+    height: 25px;
   }
-}
 
-.education-intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 40px auto 30px;
-}
+  .logo span {
+    font-size: 1.5rem;
+  }
 
-.education-intro h1 {
-  font-size: 2.8rem;
-  color: #0A2540;
-  margin-bottom: 16px;
-}
+  /* Ajuste del header */
+  header {
+    padding: 12px 0;
+  }
 
-.education-intro p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
-}
+  /* Ajuste del logo para no chocar con el botón hamburguesa */
+  .logo {
+    margin-left: 25px;
+    margin-top: 2px;
+  }
 
-.guides-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin: 40px 0;
-}
+  /* Hero */
+  .hero {
+    padding: 140px 0 90px;
+  }
 
-.guide-card {
-  background: white;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.guide-card:hover {
-  transform: translateY(-6px);
-}
-
-.guide-card h3 {
-  color: #0A2540;
-  margin-top: 0;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.guide-card p {
-  color: #555;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-.btn-cta {
-  display: inline-block;
-  background-color: #0A2540;
-  color: white;
-  padding: 14px 28px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  text-align: center;
-  margin: 40px auto;
-  max-width: 300px;
-  transition: background-color 0.3s;
-}
-
-.btn-cta:hover {
-  background-color: #082038;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
   }
 
+  /* Grids */
   .benefits-grid,
-  .products-grid,
-  .guides-grid {
+  .products-grid {
     grid-template-columns: 1fr;
   }
 }
