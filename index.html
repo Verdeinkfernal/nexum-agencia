@@ -10,12 +10,23 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- FAVICONS -->
+  <!-- FAVICONS - Todos los tamaños y plataformas -->
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
   <link rel="manifest" href="/favicons/manifest.json">
   <meta name="msapplication-TileColor" content="#0A2540">
+  <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#0A2540">
 
   <!-- Google Analytics 4 -->
@@ -35,21 +46,11 @@
       <nav>
         <!-- Logo alineado a la izquierda -->
         <a href="/" class="logo">
-          <img src="/logo-nexum.png" alt="Nexum" class="logo-img">
+          <img src="/logo-nexum.png" alt="Nexum Asesores Financieros" class="logo-img">
           <span> - Asesores Financieros</span>
         </a>
 
-        <!-- Contenedor derecho: menú + botón idioma -->
-        <div class="nav-right">
-          <button class="menu-toggle" aria-label="Menú">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <button class="lang-switch" onclick="toggleLanguage()">EN</button>
-        </div>
-
-        <!-- Menú desplegable (móvil) -->
+        <!-- Menú de navegación -->
         <div class="nav-links">
           <a href="#inicio">Inicio</a>
           <a href="#beneficios">Beneficios</a>
@@ -58,8 +59,18 @@
           <a href="#trabaja">Trabaja con nosotros</a>
           <a href="#contacto">Contacto</a>
         </div>
+
+        <!-- Botón hamburguesa (móvil) -->
+        <button class="menu-toggle" aria-label="Menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </div>
+
+    <!-- Botón de idioma: FUERA del nav, flotante en esquina inferior izquierda -->
+    <a href="index-en.html" class="lang-switch" aria-label="Versión en inglés">EN</a>
   </header>
 
   <!-- Hero -->
@@ -191,7 +202,7 @@
             <textarea id="message" name="message" placeholder="Cuéntanos tus objetivos o dudas..."></textarea>
           </div>
 
-          <!-- Campos ocultos -->
+          <!-- Campos ocultos corregidos -->
           <input type="hidden" name="_subject" value="Nuevo mensaje de contacto - Nexum Asesores">
           <input type="hidden" name="_cc" value="nexum.agency@outlook.com">
           <input type="hidden" name="_next" value="https://nexum-agencia.netlify.app/gracias.html">
@@ -213,12 +224,13 @@
 
   <!-- Script -->
   <script>
-    // Google Analytics
+    // Google Analytics 4 - Configuración base
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-KN6BGQQ9NE');
 
+    // Evento personalizado: cuando se envía el formulario
     document.addEventListener('DOMContentLoaded', function () {
       const submitButton = document.getElementById('submit-contact-form');
       if (submitButton) {
@@ -231,7 +243,7 @@
       }
     });
 
-    // Cambio de idioma
+    // Función para cambio de idioma
     function toggleLanguage() {
       const currentLang = document.documentElement.getAttribute('lang');
       if (currentLang === 'es') {
@@ -250,6 +262,7 @@
       navLinks.classList.toggle('active');
     });
 
+    // Cierra el menú al hacer clic en un enlace
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         menuToggle.classList.remove('active');

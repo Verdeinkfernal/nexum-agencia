@@ -1,4 +1,25 @@
-/* === HEADER CORREGIDO: LOGO A LA IZQUIERDA, MENÚ A LA DERECHA === */
+/* style.css - Nexum Asesores Financieros */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* === HEADER CON ALTO CONTRASTE === */
 header {
   background-color: #FFFFFF;
   color: #333333;
@@ -13,7 +34,6 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1200px;
@@ -29,7 +49,7 @@ nav {
   text-decoration: none;
   font-weight: 700;
   white-space: nowrap;
-  flex-shrink: 0;
+  z-index: 10;
 }
 
 .logo-img {
@@ -45,15 +65,27 @@ nav {
   font-weight: 400;
 }
 
-/* Contenedor derecho: menú + botón idioma */
-.nav-right {
+/* Menú de navegación (escritorio) */
+.nav-links {
   display: flex;
+  gap: 30px;
   align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
+  margin-left: 30px;
 }
 
-/* Botón hamburguesa */
+.nav-links a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3A6EA5;
+}
+
+/* Botón hamburguesa (solo en móvil) */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -87,95 +119,383 @@ nav {
 }
 
 /* Menú en móvil */
-.nav-links {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100vh;
-  background-color: white;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  transition: left 0.4s ease;
-  z-index: 1000;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-}
-
-.nav-links a {
-  font-size: 1.3rem;
-  color: #0A2540;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #3A6EA5;
-}
-
-.nav-links.active {
-  left: 0;
-}
-
-/* Botón de idioma */
-.lang-switch {
-  background: #0A2540;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background 0.3s ease;
-  z-index: 1002;
-}
-
-.lang-switch:hover {
-  background: #082038;
-}
-
-/* Menú de navegación (escritorio) */
-.nav-links {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-.nav-links a {
-  color: #333333;
-  text-decoration: none;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.nav-links a:hover {
-  color: #3A6EA5;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
   }
 
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: left 0.4s ease;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
   .nav-links.active {
-    display: flex;
+    left: 0;
+  }
+}
+
+/* Botón de idioma: flotante en esquina inferior izquierda */
+.lang-switch {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #0A2540;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  z-index: 1002;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  max-width: 60px;
+  width: auto;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.lang-switch:hover {
+  background: #082038;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero */
+.hero {
+  padding: 160px 0 100px;
+  background: linear-gradient(135deg, #0A2540 0%, #1a3d66 100%);
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  background: #3A6EA5;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(58, 110, 165, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(58, 110, 165, 0.4);
+}
+
+/* Beneficios */
+.benefits {
+  padding: 80px 0;
+  background: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #0A2540;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  background: #f0f7ff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  color: #0A2540;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  margin-bottom: 10px;
+  color: #0A2540;
+}
+
+/* Productos */
+.products {
+  padding: 80px 0;
+  background: #f0f7ff;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-content {
+  padding: 20px;
+}
+
+.product-content h3 {
+  color: #0A2540;
+  margin-bottom: 10px;
+}
+
+.product-content p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* ¿Por qué elegirnos? */
+.why-us {
+  padding: 80px 0;
+  background: white;
+}
+
+.why-us ul {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.why-us li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.why-us li::before {
+  content: "✓";
+  color: #0A2540;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* CTA Final */
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0A2540 0%, #1a3d66 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.9;
+}
+
+/* Formulario */
+.contact {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+  height: 100px;
+}
+
+.form-submit {
+  background: #3A6EA5;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-submit:hover {
+  background: #2c5a8c;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background: #0A2540;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
+/* === SECCIÓN: EDUCACIÓN FINANCIERA === */
+.main-content {
+  margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 70px;
+  }
+}
+
+.education-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto 30px;
+}
+
+.education-intro h1 {
+  font-size: 2.8rem;
+  color: #0A2540;
+  margin-bottom: 16px;
+}
+
+.education-intro p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.guide-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-6px);
+}
+
+.guide-card h3 {
+  color: #0A2540;
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.guide-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: #0A2540;
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 300px;
+  transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+  background-color: #082038;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
   }
 
-  .lang-switch {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1002;
+  .benefits-grid,
+  .products-grid,
+  .guides-grid {
+    grid-template-columns: 1fr;
   }
 }
