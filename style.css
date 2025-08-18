@@ -96,8 +96,8 @@ nav {
   .menu-toggle {
     display: flex;
     position: fixed;
-    top: 15px;
-    left: 15px;
+    top: 21px;
+    left: 5px;
     flex-direction: column;
     background: none;
     border: none;
@@ -426,7 +426,7 @@ footer {
   }
 
   .logo span {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   /* Ajuste del header */
@@ -436,7 +436,7 @@ footer {
 
   /* Ajuste del logo para no chocar con el botón hamburguesa */
   .logo {
-    margin-left: 25px;
+    margin-left: 3px;
     margin-top: 2px;
   }
 
